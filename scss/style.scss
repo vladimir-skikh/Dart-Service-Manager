@@ -1,0 +1,47 @@
+@import "Sections/header";
+@import "Sections/features";
+@import "Sections/statistics";
+@import "Sections/services";
+@import "Sections/feedback";
+@import "Sections/team";
+@import "Sections/contact-us";
+@import "Sections/footer";
+
+
+@import "variables";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  @include light;
+}
+.wrapper {
+  max-width: 1440px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  height: 100%;
+  margin: auto ;
+}
+.button {
+  width: 150px;
+  height: 55px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: 200ms;
+}
+.form__input {
+  flex-basis: 280px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid $primary-color;
+  margin-bottom: 20px;
+  padding: 20px;
+}

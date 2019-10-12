@@ -1,0 +1,109 @@
+@import "../variables";
+@import "../fonts";
+
+.team {
+  width: 100%;
+  padding-top: 50px;
+  background-color: $secondary-color;
+}
+.wrapper__team {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .section-title {
+      font-size: 45px;
+      @include semibold;
+      color: $primary-color;
+    }
+  .section__title {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .section-description {
+    @include light;
+    font-size: 15px;
+    color: #b0bec5;
+    line-height: 25px;
+    width: 560px;
+    text-align: center;
+  }
+  .section__description {
+    margin-bottom: 100px;
+  }
+  .images__block {
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 60px;
+    .participant__image {
+      border-radius: 50%;
+      transition-property: 
+        transform, 
+        box-shadow;
+      transition-duration: 
+        0.3s,
+        0.35s;
+      &:not(.active-image):hover {
+        box-shadow: 0 0 5px -1px rgb(141, 141, 141);
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
+    .active-image {
+      box-shadow: 0 0 5px  rgb(141, 141, 141);
+    }
+  }
+  .participant__info-block {
+    margin-bottom: 20px;
+    .participant-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+    .participant__name {
+      text-align: center;
+      display: block;
+    }
+    .participant-description {
+      text-align: center;
+      @include light;
+      color: #90a4ae;
+    }
+    .participant__description {
+      max-width: 645px;
+      padding: 0;
+    }
+  }
+  .social__links {
+    .social__link {
+      font-size: 0;
+      &::before {
+        margin-right: 30px;
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-image: url('../../images/social-links/sprite.png');
+      }
+    }
+    .tw::before {
+      background-position: -42px 0;
+    }
+    .fb::before {
+      background-position: 0 0;
+    }
+    .in::before {
+      background-position: -168px 0;
+    }
+    .db::before {
+      background-position: -84px 0;
+    }
+    .be::before {
+      background-position: -126px 0;
+    }
+  }
+}
