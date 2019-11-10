@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dart service manager</title>
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -32,13 +34,17 @@
                     <button class="button button-buy">Buy now</button>
                     <button class="button button-free">Try for free</button>
                 </div>
-                <video class="header-video" poster="../images/video-poster.png"></video>
-                <!-- Как делать кнопку для воспроизведения видео???
-                <button class="video-button video__button">
-                    <img src="../images/video-button.jpg" alt="Play video" class="video__button__image">
-                </button>
-                <span class="video-text">Watch the video</span> 
-                -->  
+                <div class="header-video__block">
+                    <video class="header-video"  controls="controls" preload="auto">
+                        <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'/>
+                        <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'/>
+                        <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg'/>
+                    </video>
+                    <div class="header-video-poster">
+                        <img src="images/video-button.png" alt="Play the video" class="header-video__button">
+                        <span class="header-video__text">Wath the video</span>
+                    </div>            
+                </div>
             </div>
         </div>
     </header>
@@ -90,23 +96,29 @@
             <div class="wrapper wrapper__services">
                 <h2 class="section-title section__title">Services</h2>
                 <p class="section-description section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                <div class="services-item services__item services__item-active">
+                <div class="services-item services__item active">
                     <div class="item-header">
                         <span class="icon-stats-bars item-icon item__icon"></span>
                         <span class="item-title">Statistics</span>
                         <span class="item-arrow"></span>
                     </div>
-                    <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
-                    <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    <div class="services__item-info">
+                       <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
+                        <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p> 
+                    </div>
+                    
                 </div>
-                <div class="services-item services__item  ">
+                <div class="services-item services__item ">
                     <div class="item-header">
                         <span class="icon-envelop item-icon item__icon"></span>     
                         <span class="item-title">inbox</span>
                         <span class="item-arrow"></span>
                     </div>
-                    <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
-                    <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    <div class="services__item-info">
+                        <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
+                        <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    </div>
+                    
                 </div>
                 <div class="services-item services__item">
                     <div class="item-header">
@@ -114,8 +126,11 @@
                         <span class="item-title">team</span>
                         <span class="item-arrow"></span>
                     </div>
-                    <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
-                    <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    <div class="services__item-info">
+                        <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
+                        <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    </div>
+                    
                 </div>
                 <div class="services-item services__item">
                     <div class="item-header">
@@ -123,8 +138,11 @@
                         <span class="item-title">settings</span>
                         <span class="item-arrow"></span>
                     </div>
-                    <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
-                    <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    <div class="services__item-info">
+                        <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
+                        <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    </div>
+                    
                 </div>
                 <div class="services-item services__item">
                     <div class="item-header">
@@ -132,8 +150,11 @@
                         <span class="item-title">feed</span>
                         <span class="item-arrow"></span>
                     </div>
-                    <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
-                    <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    <div class="services__item-info">
+                        <img src="../../images/Rounded_Rectangle_53.png" alt="" class="item-image">
+                        <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                    </div>
+                   
                 </div>
             </div>
         </section>
@@ -144,8 +165,13 @@
                     <p class="section-description section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
                     <button class="button button__feedback">Get started</button>
                 </div>
-                <div class="feedback__column column-2">
-                    <img src="/images/icomoon icons/circle-up.svg" alt="" class="feedback-arrow-up feedback-arrow">
+                <div class="my-slider">
+                    <div class="slider-item">Item 1</div>
+                    <div class="slider-item">Item 2</div>
+                    <div class="slider-item">Item 3</div>
+                    <div class="slider-item">Item 4</div>
+                </div>
+<!--                 <div class="feedback__column column-2">
                     <div class="feedback-text feedback__text">
                         <h3 class="feedback-author feedback__author">John Doe</h3>
                         <img src="/images/John Doe.png" alt="" class="profile-photo profile__photo">
@@ -156,8 +182,7 @@
                         <img src="/images/Khalessi.png" alt="" class="profile-photo profile__photo">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     </div>
-                    <img src="/images/icomoon icons/circle-down.svg" alt="" class="feedback-arrow-down feedback-arrow">
-                </div>
+                </div> -->
             </div>
         </section>
         <section class="section team">
@@ -165,12 +190,20 @@
                 <h2 class="section-title section__title">Our Team</h2>
                 <p class="section-description section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
                 <div class="images__block">
-                    <img src="/images/Team/Ellie.png" alt="" class="participant-image participant__image">
-                    <img src="/images/Team/Sophie.png" alt="" class="participant-image participant__image active-image">
-                    <img src="/images/Team/Karl.png" alt="" class="participant-image participant__image">
+                    <img src="/images/Team/Ellie.png" alt="" class="participant-image participant__image" id="participant-1">
+                    <img src="/images/Team/Sophie.png" alt="" class="participant-image participant__image active-image" id="participant-2">
+                    <img src="/images/Team/Karl.png" alt="" class="participant-image participant__image" id="participant-3">
                 </div>
-                <div class="participant__info-block">
+                <div class="participant__info-block" id="participant-1-info">
+                    <span class="participant-name participant__name">Morgan Williams</span>
+                    <p class="participant-description participant__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                </div>
+                <div class="participant__info-block active" id="participant-2-info">
                     <span class="participant-name participant__name">Sophie Turner</span>
+                    <p class="participant-description participant__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                </div>
+                <div class="participant__info-block" id="participant-3-info">
+                    <span class="participant-name participant__name">John Doe</span>
                     <p class="participant-description participant__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
                 </div>
                 <div class="social__links">
@@ -246,5 +279,9 @@
             </div>
         </div>
     </footer>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick/slick.min.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 </html>

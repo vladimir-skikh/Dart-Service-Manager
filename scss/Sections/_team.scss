@@ -58,6 +58,7 @@
     }
   }
   .participant__info-block {
+    display: none;
     margin-bottom: 20px;
     .participant-name {
       font-size: 18px;
@@ -77,6 +78,9 @@
       max-width: 645px;
       padding: 0;
     }
+  }
+  .active {
+    display: block;
   }
   .social__links {
     .social__link {
