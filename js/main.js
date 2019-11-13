@@ -1,4 +1,4 @@
-/* $(function() {
+$(function() {
   $('.header-video__button').on('click', function() {
     $('.header-video-poster').css({"display":"none"});
     let video = $('.header-video');
@@ -8,11 +8,10 @@
   $('.my-slider').slick({
     vertical: true,
     verticalSwiping: true,
-    centerMode: true,
-    centerPadding: '0px',
-    slidesToShow: 1,
+    slidesToShow: 2,
+    slidesToScroll: 1
   });
-}); */
+});
 
 let items = document.querySelectorAll('.services-item');
 var service = function (items_arr) {

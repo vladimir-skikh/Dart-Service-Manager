@@ -842,10 +842,47 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* .feedback-text {
+    border-radius: 5px;
+    background-color: $secondary-color;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    font-style: italic;
+    color: #78909c;
+    @include light;
+  }
+  .feedback__text {
+    max-width: 650px;
+    height: 160px;
+    padding: 25px;
+    position: relative;
+    .feedback-author {
+      font-style: normal;
+      font-size: 18px;
+      font-weight: 700;
+      color: $primary-color;
+      @include light;
+    }
+    .feedback__author {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    .profile__photo {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50px;
+      left: -100px;
+    }
+  } */
 }
 
 .wrapper-feedback .feedback__column {
-  max-width: 650px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .wrapper-feedback .feedback__column .section-title {
@@ -888,7 +925,7 @@
   background-color: #fff;
 }
 
-.wrapper-feedback .feedback__column .feedback-text {
+.wrapper-feedback .feedback__item {
   border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -896,22 +933,21 @@
   font-style: italic;
   color: #78909c;
   font-family: 'Raleway Light';
-}
-
-.wrapper-feedback .feedback__column .feedback__text {
-  width: 650px;
+  max-width: 650px;
   height: 160px;
   padding: 25px;
-  position: relative;
-  margin-bottom: 30px;
 }
 
-.wrapper-feedback .feedback__column .feedback__text:first-of-type {
-  margin-bottom: 70px;
-  margin-top: 30px;
+.wrapper-feedback .feedback-1-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 80px;
 }
 
-.wrapper-feedback .feedback__column .feedback__text .feedback-author {
+.wrapper-feedback .feedback-1-author {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
   font-style: normal;
   font-size: 18px;
   font-weight: 700;
@@ -919,71 +955,45 @@
   font-family: 'Raleway Light';
 }
 
-.wrapper-feedback .feedback__column .feedback__text .feedback__author {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
+.my-slider {
+  max-width: 800px;
 }
 
-.wrapper-feedback .feedback__column .feedback__text .profile__photo {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 50px;
-  left: -100px;
-}
-
-.wrapper-feedback .feedback-arrow {
-  stroke: #061e37;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.wrapper-feedback .feedback-arrow:hover {
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.wrapper-feedback .column-2 {
+.slide-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.my-slider {
-  position: relative;
-  max-width: 500px;
-  height: 50px;
+  margin: 35px 0;
 }
 
 .slick-prev {
   position: absolute;
   top: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-100%) rotate(90deg) !important;
+          transform: translateY(-100%) rotate(90deg) !important;
 }
 
 .slick-next {
   position: absolute;
   top: 100%;
+  -webkit-transform: rotate(90deg) !important;
+          transform: rotate(90deg) !important;
 }
 
 .slick-arrow {
-  left: 50%;
+  left: 57%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.slick-arrow:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 @font-face {
@@ -1296,12 +1306,14 @@
 }
 
 .contact-us__form .form__row .form-input {
+  outline: none;
   color: #061e37;
   font-family: 'Raleway Light';
   font-weight: 500;
 }
 
 .contact-us__form .form__row .form-message {
+  outline: none;
   color: #061e37;
   font-family: 'Raleway Light';
   font-weight: 500;
